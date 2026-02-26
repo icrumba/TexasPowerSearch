@@ -8,13 +8,13 @@ export default function NewPlanPage() {
       <div className="mb-6">
         <Link
           href="/admin/plans"
-          className="text-blue-600 hover:text-blue-800 hover:underline"
+          className="text-texas-navy hover:text-texas-navy/70 hover:underline"
         >
           ← Back to Plans
         </Link>
       </div>
 
-      <h2 className="text-2xl font-bold mb-6 text-gray-900">Add New Plan</h2>
+      <h2 className="text-2xl font-bold mb-6 text-texas-navy">Add New Plan</h2>
 
       <PlanForm action={createPlan} />
     </div>

@@ -29,7 +29,7 @@ export default function DeletePlanButton({ planId }: DeletePlanButtonProps) {
     <button
       onClick={handleDelete}
       disabled={isDeleting}
-      className="text-red-600 hover:text-red-800 hover:underline disabled:opacity-50 disabled:cursor-not-allowed"
+      className="text-texas-red hover:text-texas-red/70 hover:underline disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {isDeleting ? 'Deleting...' : 'Delete'}
     </button>

@@ -19,22 +19,22 @@ export default async function AdminLayout({
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-white shadow">
+    <div className="min-h-screen">
+      <header className="bg-texas-navy shadow">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-6">
-            <Link href="/admin/plans" className="text-xl font-bold text-gray-900">
+            <Link href="/admin/plans" className="text-xl font-bold text-white">
               Admin Panel
             </Link>
             <Link
               href="/"
-              className="text-sm text-blue-600 hover:text-blue-800"
+              className="text-sm text-texas-gold hover:text-texas-gold/80"
             >
               ← View Public Site
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <span className="text-sm text-gray-600">{session.user.email}</span>
+            <span className="text-sm text-white/70">{session.user.email}</span>
             <LogoutButton />
           </div>
         </div>

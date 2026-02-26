@@ -30,6 +30,18 @@ export async function getPlansByZip(zipCode: string): Promise<Plan[]> {
     rateCentsPerKwh: plan.rate_cents_per_kwh,
     termMonths: plan.term_months,
     zipCode: plan.zip_code,
+    isVariableRate: plan.is_variable_rate,
+    billCreditKwhThreshold: plan.bill_credit_kwh_threshold,
+    minimumUsageFee: plan.minimum_usage_fee,
+    earlyTerminationFee: plan.early_termination_fee,
+    baseMonthlyFee: plan.base_monthly_fee,
+    noDeposit: plan.no_deposit,
+    isPrepaid: plan.is_prepaid,
+    sameDayService: plan.same_day_service,
+    greenEnergyPercent: plan.green_energy_percent,
+    providerUrl: plan.provider_url,
+    planUrl: plan.plan_url,
+    affiliateUrl: plan.affiliate_url,
   }));
 }
 

@@ -15,7 +15,7 @@ function SubmitButton({ isEdit }: { isEdit: boolean }) {
     <button
       type="submit"
       disabled={pending}
-      className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full bg-texas-navy text-white py-2 rounded-md hover:bg-texas-navy/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {pending ? (isEdit ? 'Updating...' : 'Creating...') : (isEdit ? 'Update Plan' : 'Create Plan')}
     </button>
@@ -38,7 +38,7 @@ export default function PlanForm({ action, initialData }: PlanFormProps) {
           name="provider"
           defaultValue={initialData?.provider}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-texas-navy focus:border-texas-navy"
           placeholder="e.g., TXU Energy, Reliant"
         />
       </div>
@@ -53,7 +53,7 @@ export default function PlanForm({ action, initialData }: PlanFormProps) {
           name="planName"
           defaultValue={initialData?.planName}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-texas-navy focus:border-texas-navy"
           placeholder="e.g., Energy Plus 12"
         />
       </div>
@@ -70,7 +70,7 @@ export default function PlanForm({ action, initialData }: PlanFormProps) {
           min="0.01"
           defaultValue={initialData?.rateCentsPerKwh}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-texas-navy focus:border-texas-navy"
           placeholder="e.g., 12.50"
         />
       </div>
@@ -86,7 +86,7 @@ export default function PlanForm({ action, initialData }: PlanFormProps) {
           min="1"
           defaultValue={initialData?.termMonths}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-texas-navy focus:border-texas-navy"
           placeholder="e.g., 12"
         />
       </div>
@@ -103,15 +103,15 @@ export default function PlanForm({ action, initialData }: PlanFormProps) {
           pattern="\d{5}"
           defaultValue={initialData?.zipCode}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-texas-navy focus:border-texas-navy"
           placeholder="e.g., 75001"
         />
         <p className="mt-1 text-sm text-gray-500">Must be 5 digits</p>
       </div>
 
       {state?.error && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-md">
-          <p className="text-red-600 text-sm">{state.error}</p>
+        <div className="p-4 bg-texas-red/10 border border-texas-red/20 rounded-md">
+          <p className="text-texas-red text-sm">{state.error}</p>
         </div>
       )}
 
